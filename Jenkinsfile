@@ -16,4 +16,8 @@ node {
             app.push("latest")
         }
     }
+    stage('Deploy') {
+        sh 'docker rm -f flask1'
+        sh 'docker run -d -p 80:80 --name flask1 flask-demo'
+    }  
 }
