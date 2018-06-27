@@ -2,9 +2,6 @@
 
 
 # Jenkins Installation
-mkdir ~/jenkins
-
-cd ~/jenkins
 
 docker pull jenkins/jenkins:lts
 
