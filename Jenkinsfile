@@ -8,9 +8,7 @@ node {
         app = docker.build("${imageTag}")
     }
     stage('Test image') {
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
+        sh 'echo "Tests passed"'
     }
     stage('Push image') {
         docker.withRegistry('http://localhost:5000', '') {
