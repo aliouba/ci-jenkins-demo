@@ -1,9 +1,17 @@
 # ci-jenkins-demo
 
+# Compose Installation
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+docker-compose --version
+
 
 # Jenkins Installation
 
-docker pull jenkins/jenkins:lts
+docker pull jenkins
 
-docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home --restart always jenkins/jenkins:lts
+docker-compose up
 
