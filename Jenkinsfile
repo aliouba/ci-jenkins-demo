@@ -1,6 +1,6 @@
 node {
     def appName = 'flask-demo'
-    def imageTag = "localhost:5000/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
+    def imageTag = "localhost:5000/${appName}:${env.BUILD_NUMBER}"
     stage('Clone repository') {
         checkout scm
     }
