@@ -8,10 +8,15 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose --version
 
+# Pull the code
+
+git clone https://github.com/aliouba/ci-jenkins-demo.git
+
+cd ci-jenkins-demo
 
 # Jenkins Installation
 
 docker pull jenkins
 
-docker-compose up
+docker-compose up -d
 
