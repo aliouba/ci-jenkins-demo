@@ -19,10 +19,10 @@ node {
     stage('Deploy') {
         try {
             sh 'docker rm -f flask1'
-            sh 'docker run -d -p 80:80 --name flask1 flask-demo'
+            sh 'docker run -d -p 80:80 --name flask1 localhost:5000/flask-demo:latest'
         }
         catch (exc) {
-            sh 'docker run -d -p 80:80 --name flask1 flask-demo'
+            sh 'docker run -d -p 80:80 --name flask1 localhost:5000/flask-demo:latest'
         }
     }
 }
