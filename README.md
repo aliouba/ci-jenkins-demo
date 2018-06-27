@@ -16,6 +16,8 @@ cd ci-jenkins-demo
 
 # Jenkins Installation
 
+cd jenkins
+
 docker pull jenkins
 
 docker-compose up -d
